@@ -1,16 +1,16 @@
 # Smart football table
 
-![logo](https://github.com/KingMus/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
+![logo](https://github.com/pfichtner/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
 
-## Shortcut: --> [Thoughts on camera](https://github.com/KingMus/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
+## Shortcut: --> [Thoughts on camera](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
 
 ## Shortcut: --> Architecture
 
-![arc](https://github.com/KingMus/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
+![arc](https://github.com/pfichtner/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
 
 ## Shortcut: --> Football Table values
 
-![werte](https://github.com/KingMus/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
+![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
 
 ### Ideas to implement
 
@@ -28,6 +28,7 @@
   * goal seems to happen?
 * Replay of special events
 * Livestream of Video
+* Idle for UI (Diashow, Best Moments, etc)
 
 ###### related to player
 
