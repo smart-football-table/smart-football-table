@@ -1,12 +1,16 @@
 [submodule "smart-football-table-ui"]
 	path = smart-football-table-ui
 	url = https://github.com/fiduciagad/smart-football-table-ui.git
+	branch = master
 [submodule "smart-football-table-detection"]
 	path = smart-football-table-detection
 	url = https://github.com/kingmus/smart-football-table-detection.git
+	branch = master
 [submodule "smart-football-table-sound"]
 	path = smart-football-table-sound
 	url = https://github.com/pfichtner/smart-football-table-sound.git
+	branch = master
 [submodule "smart-football-table-ledcontrol"]
 	path = smart-football-table-ledcontrol
 	url = https://github.com/pfichtner/smart-football-table-ledcontrol.git
+	branch = master
