@@ -2,7 +2,7 @@ version: '2.0'
 
 services:
 
-  mqttbroker: 
+  mqttbroker:
     image: eclipse-mosquitto
     expose:
       - "1883"
@@ -42,4 +42,9 @@ services:
     environment:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
-
+      - PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native
+    volumes:
+      - '${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native'
+      - '~/.config/pulse/cookie:/root/.config/pulse/cookie'
+    devices:
+      - "/dev/snd"
