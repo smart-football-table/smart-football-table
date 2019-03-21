@@ -12,6 +12,9 @@
 
 ![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
 
+### Build and run
+Clone this repository using --recursive switch (```git clone --recursive https://github.com/pfichtner/smart-football-table.git```) then update all submodules to their latest commit using ```git submodule update --recursive```
+
 ### Ideas to implement
 
 ###### general
