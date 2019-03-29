@@ -67,12 +67,13 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 * Metadata (price, size values, ...)
 
 ## MQTT messages
-| topic                      | Description                                   | Example payload        |
-| -------------------------- | --------------------------------------------- |----------------------- |
-| leds/backgroundlight/color | Sets the background light, default is #000000 | #CC11DD                |
-| game/score                 | The teams' scores                             | { "score": [ 0, 3 ] }  |
-| game/foul                  | Some foul has happened                        | -                      |
-| game/gameover              | A match ended                                 | { "winners": [ 0 ] }   |
-| game/idle                  | Is there action on the table                  | { "idle": true }       |
+| topic                      | Description                                             | Example payload        |
+| -------------------------- | ------------------------------------------------------- |----------------------- |
+| leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                |
+| game/position (deprecated) | The ball absolute position on the table, -1,-1 for none | { "x": 42, "y": 83 ] } |
+| game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }  |
+| game/foul                  | Some foul has happened                                  | -                      |
+| game/gameover              | A match ended                                           | { "winners": [ 0 ] }   |
+| game/idle                  | Is there action on the table                            | { "idle": true }       |
 | leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111    |
 
