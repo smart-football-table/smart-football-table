@@ -18,7 +18,6 @@ services:
   smart-football-table-ui:
     build:
       context: smart-football-table-ui
-      dockerfile: Dockerfile
     volumes:
       - '.:/usr/src/app'
       - '/usr/src/app/node_modules'
@@ -26,7 +25,8 @@ services:
       - '80:80'
 
   smart-football-table-ledcontrol:
-    image: smart-football-table/ledcontrol
+    build:
+      context: smart-football-table-ledcontrol
     environment:
       - LEDS=72
       - TTY=/dev/ttyUSB0
@@ -38,7 +38,6 @@ services:
   smart-football-table-sound:
     build:
       context: smart-football-table-sound
-      dockerfile: Dockerfile
     environment:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
