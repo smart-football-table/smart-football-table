@@ -70,10 +70,11 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 | topic                      | Description                                             | Example payload             |
 | -------------------------- | ------------------------------------------------------- |---------------------------- |
 | leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                     |
-| game/ball/position         | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333 ] } |
-| game/ball/velocity         | The balls average speed in the last half second, km/h   | { "velocity": [ 30 ] }      |
+| ball/position              | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333}    |
+| ball/velocity              | The balls average speed in the last half second, km/h   | { "velocity": [ 30 ] }      |
 | game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       |
 | game/foul                  | Some foul has happened                                  | -                           |
+| game/start                 | A match starts                                          | -                           |
 | game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
 | game/idle                  | Is there action on the table                            | { "idle": true }            |
 | leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
