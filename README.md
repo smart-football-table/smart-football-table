@@ -13,7 +13,7 @@
 ![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
 
 ### Build and run
-Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/pfichtner/smart-football-table.git```) then update all submodules to their latest commit using ```git submodule foreach git pull origin master && git submodule foreach git pull origin master```
+Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/pfichtner/smart-football-table.git```. After cloning run ```git submodule foreach git checkout master``` once. For the periodic updates run ```git submodule foreach git pull origin master```. 
 
 ### Ideas to implement
 
