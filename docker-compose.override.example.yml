@@ -1,0 +1,12 @@
+version: '2.0'
+
+# rename to docker-compose.override.yml
+# set a dummy device for the led stipe, e.g. 
+# using export or call with env
+# LED_STRIPE_DEVICE=/dev/null docker-compose up
+
+services:
+
+  smart-football-table-ledcontrol:
+    image: tianon/true
+

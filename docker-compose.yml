@@ -33,7 +33,7 @@ services:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
     devices:
-      - "/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0:/dev/ttyUSB0"
+      - "${LED_STRIPE_DEVICE}:/dev/ttyUSB0"
 
   smart-football-table-sound:
     build:
