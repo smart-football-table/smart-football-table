@@ -4,6 +4,7 @@ services:
 
   mqttbroker:
     image: eclipse-mosquitto
+    hostname: mqttbroker
     expose:
       - "1883"
       - "9001"
@@ -25,8 +26,7 @@ services:
       - '80:80'
 
   smart-football-table-ledcontrol:
-    build:
-      context: smart-football-table-ledcontrol
+    image: smart-football-table/ledcontrol
     environment:
       - LEDS=72
       - TTY=/dev/ttyUSB0
