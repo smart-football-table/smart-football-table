@@ -76,6 +76,6 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 | game/foul                  | Some foul has happened                                  | -                           |
 | game/start                 | A match starts                                          | -                           |
 | game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
-| game/idle                  | Is there action on the table                            | { "idle": true }            |
+| game/idle                  | Is there action on the table                            | true                        |
 | leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
 
