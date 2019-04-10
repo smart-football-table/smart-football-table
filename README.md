@@ -75,7 +75,7 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 | ball/velocity/kmh          | The balls average speed in the last half second, km/h   | 30                          |
 | team/scored                | The id of the team that scored                          | 1                           |
 | game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       | deprecated
-| game/score/`<team>`        | The team's score                                        | 3                           | 
+| game/score/\<team\>        | The team's score                                        | 3                           | 
 | game/foul                  | Some foul has happened                                  | -                           |
 | game/start                 | A match starts                                          | -                           |
 | game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
