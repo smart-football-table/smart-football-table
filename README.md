@@ -73,6 +73,7 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 | ball/position              | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333}    |
 | ball/velocity              | The balls average speed in the last half second, km/h   | { "velocity": 30 }          | deprecated
 | ball/velocity/kmh          | The balls average speed in the last half second, km/h   | 30                          |
+| ball/velocity/ms           | The balls average speed in the last half second, m/s    | 5                           |
 | team/scored                | The id of the team that scored                          | 1                           |
 | game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       | deprecated
 | game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)       | 3                           | 
