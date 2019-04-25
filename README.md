@@ -1,72 +1,49 @@
 # Smart football table
 
-![logo](https://github.com/pfichtner/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
+![logo](https://github.com/pfichtner/smart-football-table/blob/master/docs/logo/SFT_Logo2_Blue_small.jpg)
 
-## Shortcut: --> [Thoughts on camera](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
+# >Attention, draft below!<
 
-## Shortcut: --> Architecture
+## Overview
 
-![arc](https://github.com/pfichtner/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
+TODO make it clickable and with more detail
 
-## Shortcut: --> Football Table values
+1) Getting started
+2) The actual solution
+3) Why this project
+4) Next steps
 
-![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
+## Getting started
 
-### Build and run
+#### Requirements
+
+###### Software
+* Docker
+* OpenCV
+* for YOLO: CUDA & darknet (read more [here](https://github.com/KingMus/smart-football-table-detection/tree/master/yolov3))
+
+###### Hardware
+* Soccer Table (our table: Vector3)
+* Camera (TODO describe which one and what to avoid...)
+* Something to hold the camera over the table (TODO explain possible solutions and our thing)
+* LED strip
+* 3D-printed camera holding (TODO upload 3dmodels in this repo)
+* GPU
+* dont forget enough cable
+
+TODO deliver a shopping list for different cases and/or our solution/recommendation for this
+
+#### Build and run
 Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/pfichtner/smart-football-table.git```. After cloning run ```git submodule foreach git checkout master``` once. For the periodic updates run ```git pull && git submodule foreach git pull origin master```. 
 
-### Ideas to implement
+TODO use docker in detection or explain how to start this here
 
-###### general
+## The actual solution
 
-* configuration
-  * Camera size/height and the resulting frame size
-  * football table values
-  * Buttons on table kicker for new game (reset and start) and end game (close and evaluate)
-* own account
-  * after a single registration, register with the NFC chip at the kicker (position-related)
-  * create statistics (see above)
-* LED
-  * for possession of the ball in team colour
-  * goal seems to happen?
-* Replay of special events
-* Livestream of Video
-* Idle for UI (Diashow, Best Moments, etc)
+#### Architecture
+![arc](https://github.com/pfichtner/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
 
-###### related to player
-
-* Wins/Loss
-* Wins in combination with position
-* average ball possession
-* Goals in combination with position
-* shot velocity
-* prevented goals
-* Wins in combination with other player
-* Wins in combination with daytime
-* [...]
-
-###### related to game
-
-* Result
-* Ballpossession in combination with team
-* Heatmap
-* Metadata (which players, daytime)
-* Ballpossession in combination with player
-* Ballpossession in combination with soccer figure
-* Goals who/where
-* average ball velocity
-* prevented goals/site
-* [...]
-
-###### related football table
-
-* which team wins more often
-* average ball velocity
-* Goals in combination with position
-* when is played
-* Metadata (price, size values, ...)
-
-## MQTT messages
+#### MQTT messages
 | topic                      | Description                                             | Example payload             | Comment
 | -------------------------- | ------------------------------------------------------- |---------------------------- | -------
 | leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                     |
@@ -83,4 +60,65 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 | game/idle                  | Is there action on the table                            | true                        |
 | game/reset                 | Command to interrupt the running game and startover     |                             |
 | leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
+
+## Why this project?
+
+TODO
+
+## Ideas to implement
+
+###### general
+* configuration
+  * Camera size/height and the resulting frame size
+  * football table values
+  * Buttons on table kicker for new game (reset and start) and end game (close and evaluate)
+* own account
+  * after a single registration, register with the NFC chip at the kicker (position-related)
+  * create statistics (see above)
+* LED
+  * for possession of the ball in team colour
+  * goal seems to happen?
+* Replay of special events
+* Livestream of Video
+* Idle for UI (Diashow, Best Moments, etc)
+
+###### related to player
+* Wins/Loss
+* Wins in combination with position
+* average ball possession
+* Goals in combination with position
+* shot velocity
+* prevented goals
+* Wins in combination with other player
+* Wins in combination with daytime
+* [...]
+
+###### related to game
+* Result
+* Ballpossession in combination with team
+* Heatmap
+* Metadata (which players, daytime)
+* Ballpossession in combination with player
+* Ballpossession in combination with soccer figure
+* Goals who/where
+* average ball velocity
+* prevented goals/site
+* [...]
+
+###### related football table
+* which team wins more often
+* average ball velocity
+* Goals in combination with position
+* when is played
+* Metadata (price, size values, ...)
+
+## old stuff without purpose yet
+
+##### Shortcut: --> [Thoughts on camera](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
+
+##### Shortcut: --> Football Table values
+
+![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
+
+
 
