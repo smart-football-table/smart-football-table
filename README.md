@@ -1,6 +1,6 @@
 # Smart football table
 
-![logo](https://github.com/smart-football-table/smart-football-table/blob/master/docs/logo/SFT_Logo2_Blue_small.jpg)
+![logo](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/logo/SFT_Logo2_Blue_small.jpg)
 
 # >Attention, draft below!<
 
@@ -41,7 +41,7 @@ TODO use docker in detection or explain how to start this here
 ## The actual solution
 
 #### Architecture
-![arc](https://github.com/smart-football-table/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
+![arc](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/architecture/SmartFootballTable_Architecture.png)
 
 #### MQTT messages
 | topic                      | Description                                             | Example payload             | Comment
@@ -111,14 +111,3 @@ TODO
 * Goals in combination with position
 * when is played
 * Metadata (price, size values, ...)
-
-## old stuff without purpose yet
-
-##### Shortcut: --> [Thoughts on camera](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
-
-##### Shortcut: --> Football Table values
-
-![werte](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
-
-
-
