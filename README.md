@@ -4,6 +4,8 @@
 
 # >Attention, draft below!<
 
+--> [Website](https://smart-football-table.github.io/)
+
 ## Overview
 
 TODO make it clickable and with more detail
