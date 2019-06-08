@@ -1,19 +1,19 @@
 # Smart football table
 
-![logo](https://github.com/pfichtner/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
+![logo](https://github.com/smart-football-table/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
 
-## Shortcut: --> [Thoughts on camera](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
+## Shortcut: --> [Thoughts on camera](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
 
 ## Shortcut: --> Architecture
 
-![arc](https://github.com/pfichtner/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
+![arc](https://github.com/smart-football-table/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
 
 ## Shortcut: --> Football Table values
 
-![werte](https://github.com/pfichtner/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
+![werte](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
 
 ### Build and run
-Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/pfichtner/smart-football-table.git```. After cloning run ```git submodule foreach git checkout master``` once. For the periodic updates run ```git pull && git submodule foreach git pull origin master```. 
+Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/smart-football-table/smart-football-table.git```. After cloning run ```git submodule foreach git checkout master``` once. For the periodic updates run ```git pull && git submodule foreach git pull origin master```. 
 
 ### Ideas to implement
 
