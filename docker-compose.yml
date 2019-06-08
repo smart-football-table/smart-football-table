@@ -16,6 +16,12 @@ services:
     networks:
       - default
 
+  smart-football-table-cognition: 
+    image: smart-football-table/cognition
+    environment:
+      - MQTTHOST=mqttbroker
+      - MQTTPORT=1883
+
   smart-football-table-ui:
     build:
       context: smart-football-table-ui
