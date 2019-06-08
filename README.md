@@ -1,24 +1,75 @@
 # Smart football table
 
-![logo](https://github.com/smart-football-table/smart-football-table/blob/master/docs/logo/SFT_Logo_Color_small.png)
+![logo](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/logo/SFT_Logo2_Blue_small.jpg)
 
-## Shortcut: --> [Thoughts on camera](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/situation_fov_fps_camera.md)
+# >Attention, draft below!<
 
-## Shortcut: --> Architecture
+--> [Website](https://smart-football-table.github.io/)
 
-![arc](https://github.com/smart-football-table/smart-football-table/blob/master/docs/architecture/SmartFootballTable_Architecture.png)
+## Overview
 
-## Shortcut: --> Football Table values
+TODO make it clickable and with more detail
 
-![werte](https://github.com/smart-football-table/smart-football-table/blob/master/docs/calculations/kicker_werte.jpg)
+1) Getting started
+2) The actual solution
+3) Why this project
+4) Next steps
 
-### Build and run
+## Getting started
+
+#### Requirements
+
+###### Software
+* Docker
+* OpenCV
+* for YOLO: CUDA & darknet (read more [here](https://github.com/KingMus/smart-football-table-detection/tree/master/yolov3))
+
+###### Hardware
+* Soccer Table (our table: Vector3)
+* Camera (TODO describe which one and what to avoid...)
+* Something to hold the camera over the table (TODO explain possible solutions and our thing)
+* LED strip
+* 3D-printed camera holding (TODO upload 3dmodels in this repo)
+* GPU
+* dont forget enough cable
+
+TODO deliver a shopping list for different cases and/or our solution/recommendation for this
+
+#### Build and run
 Clone this repository using --recurse-submodules switch (```git clone --recurse-submodules https://github.com/smart-football-table/smart-football-table.git```. After cloning run ```git submodule foreach git checkout master``` once. For the periodic updates run ```git pull && git submodule foreach git pull origin master```. 
 
-### Ideas to implement
+TODO use docker in detection or explain how to start this here
+
+## The actual solution
+
+#### Architecture
+![arc](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/architecture/SmartFootballTable_Architecture.png)
+
+#### MQTT messages
+| topic                      | Description                                             | Example payload             | Comment
+| -------------------------- | ------------------------------------------------------- |---------------------------- | -------
+| leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                     |
+| ball/position              | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333}    |
+| ball/velocity              | The balls average speed in the last half second, km/h   | { "velocity": 30 }          | deprecated
+| ball/velocity/kmh          | The balls average speed in the last half second, km/h   | 30                          |
+| ball/velocity/ms           | The balls average speed in the last half second, m/s    | 5                           |
+| team/scored                | The id of the team that scored                          | 1                           |
+| game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       | deprecated
+| game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)       | 3                           | 
+| game/foul                  | Some foul has happened                                  | -                           |
+| game/start                 | A match starts                                          | -                           |
+| game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
+| game/idle                  | Is there action on the table                            | true                        |
+| game/reset                 | Command to interrupt the running game and startover     |                             |
+| leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
+
+## Why this project?
+
+TODO
+
+## Ideas to implement
 
 ###### general
-
 * configuration
   * Camera size/height and the resulting frame size
   * football table values
@@ -34,7 +85,6 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 * Idle for UI (Diashow, Best Moments, etc)
 
 ###### related to player
-
 * Wins/Loss
 * Wins in combination with position
 * average ball possession
@@ -46,7 +96,6 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 * [...]
 
 ###### related to game
-
 * Result
 * Ballpossession in combination with team
 * Heatmap
@@ -59,27 +108,8 @@ Clone this repository using --recurse-submodules switch (```git clone --recurse-
 * [...]
 
 ###### related football table
-
 * which team wins more often
 * average ball velocity
 * Goals in combination with position
 * when is played
 * Metadata (price, size values, ...)
-
-## MQTT messages
-| topic                      | Description                                             | Example payload             | Comment
-| -------------------------- | ------------------------------------------------------- |---------------------------- | -------
-| leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                     |
-| ball/position              | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333}    |
-| ball/velocity              | The balls average speed in the last half second, km/h   | { "velocity": 30 }          | deprecated
-| ball/velocity/kmh          | The balls average speed in the last half second, km/h   | 30                          |
-| team/scored                | The id of the team that scored                          | 1                           |
-| game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       | deprecated
-| game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)       | 3                           | 
-| game/foul                  | Some foul has happened                                  | -                           |
-| game/start                 | A match starts                                          | -                           |
-| game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
-| game/idle                  | Is there action on the table                            | true                        |
-| game/reset                 | Command to interrupt the running game and startover     |                             |
-| leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
-
