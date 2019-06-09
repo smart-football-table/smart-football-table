@@ -14,3 +14,6 @@
 	path = smart-football-table-sound
 	url = https://github.com/pfichtner/smart-football-table-sound.git
 	branch = master
+[submodule "smart-football-table-cognition"]
+	path = smart-football-table-cognition
+	url = https://github.com/smart-football-table/smart-football-table-cognition.git
