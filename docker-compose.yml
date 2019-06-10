@@ -22,12 +22,16 @@ services:
     environment:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
+    depends_on:
+      - "mqttbroker"
 
   smart-football-table-cognition: 
     image: smart-football-table/cognition
     environment:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
+    depends_on:
+      - "mqttbroker"
 
   smart-football-table-ui:
     build:
@@ -37,6 +41,8 @@ services:
       - '/usr/src/app/node_modules'
     ports:
       - '80:80'
+    depends_on:
+      - "mqttbroker"
 
   smart-football-table-ledcontrol:
     image: smart-football-table/ledcontrol
@@ -47,6 +53,8 @@ services:
       - TTY=/dev/ttyUSB0
     devices:
       - "${LED_STRIPE_DEVICE}:/dev/ttyUSB0"
+    depends_on:
+      - "mqttbroker"
 
   smart-football-table-sound:
     build:
@@ -60,3 +68,6 @@ services:
       - '~/.config/pulse/cookie:/root/.config/pulse/cookie'
     devices:
       - "/dev/snd"
+    depends_on:
+      - "mqttbroker"
+
