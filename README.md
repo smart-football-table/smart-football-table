@@ -55,8 +55,8 @@ TODO use docker in detection or explain how to start this here
 | ball/velocity              | The balls average speed in the last half second, km/h     | { "velocity": 30 }          | deprecated
 | ball/velocity/kmh          | The balls average speed in the last half second, km/h     | 30                          |
 | ball/velocity/ms           | The balls average speed in the last half second, m/s      | 5                           |
-| ball/distance/\<cm|inch\>    | The ball's distance between last and current position   | 1.23                        | values are sent in the table's unit
-| distance/overall/\<cm|inch\> | The ball's overall distance during the current match    | 123.45                      | values are sent in the table's unit
+| ball/distance/\<cm\|inch\>    | The ball's distance between last and current position   | 1.23                        | values are sent in the table's unit
+| distance/overall/\<cm\|inch\> | The ball's overall distance during the current match    | 123.45                      | values are sent in the table's unit
 | team/scored                | The id of the team that scored                            | 1                           |
 | game/score                 | The teams' scores                                         | { "score": [ 0, 3 ] }       | deprecated
 | game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
