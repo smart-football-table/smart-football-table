@@ -59,7 +59,6 @@ TODO use docker in detection or explain how to start this here
 | distance/overall/\<cm\|inch\> | The ball's overall distance during the current match    | 123.45                      | values are sent in the table's unit
 | team/scored                | The id of the team that scored                            | 1                           |
 | game/score                 | The teams' scores                                         | { "score": [ 0, 3 ] }       | 
-
 | game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
 | game/foul                  | Some foul has happened                                    | -                           |
 | game/start                 | A match starts                                            | -                           |
