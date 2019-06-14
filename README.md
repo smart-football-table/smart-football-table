@@ -53,10 +53,10 @@ TODO use docker in detection or explain how to start this here
 | ball/position/rel          | The ball's relative position on the table, between 0 and 1| 0.5,0.3333                  |
 | ball/position/abs          | The ball's absolute position on the table, between 0 and \<table width/height\> | 42,106 |
 | ~~ball/velocity~~          | ~~The balls average speed in the last half second, km/h~~ | ~~{ "velocity": 30 }~~      | **no more sent**
-| ball/velocity/kmh          | The balls average speed ~~in the last half second~~, km/h     | 30                      |
-| ball/velocity/ms           | The balls average speed ~~in the last half second~~, m/s      | 5                       |
-| ball/distance/\<cm\|inch\>    | The ball's distance between last and current position   | 1.23                       | values are sent in the table's unit
-| distance/overall/\<cm\|inch\> | The ball's overall distance during the current match    | 123.45                     | values are sent in the table's unit
+| ball/velocity/\<kmh\|mph\> | The balls average speed ~~in the last half second~~       | 30.1                        | Unit depends on table's unit (metric or imperial)
+| ball/velocity/\<ms\|ipm\>  | The balls average speed ~~in the last half second~~       | 5.2                         | Unit depends on table's unit (metric or imperial)
+| ball/distance/\<cm\|inch\>    | The ball's distance between last and current position  | 1.23                        | Unit depends on table's unit (metric or imperial)
+| distance/overall/\<cm\|inch\> | The ball's overall distance during the current match   | 123.45                      | Unit depends on table's unit (metric or imperial)
 | team/scored                | The id of the team that scored                            | 1                           |
 | game/score                 | The teams' scores                                         | { "score": [ 0, 3 ] }       | deprecated
 | game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
