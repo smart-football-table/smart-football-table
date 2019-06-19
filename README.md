@@ -59,7 +59,7 @@ TODO use docker in detection or explain how to start this here
 | distance/overall/\<cm\|inch\> | The ball's overall distance during the current match   | 123.45                      | Unit depends on table's unit (centimeters or inches)
 | team/scored                | The id of the team that scored                            | 1                           |
 | game/score                 | The teams' scores                                         | { "score": [ 0, 3 ] }       | deprecated
-| game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
+| team/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
 | game/foul                  | Some foul has happened                                    | -                           |
 | game/start                 | A match starts                                            | -                           |
 | game/gameover              | A match ended                                             | 0,1                         | On draw all teams are sent separated by comma therwise the winning team only
