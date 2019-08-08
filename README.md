@@ -46,22 +46,26 @@ TODO use docker in detection or explain how to start this here
 ![arc](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/architecture/SmartFootballTable_Architecture.png)
 
 #### MQTT messages
-| topic                      | Description                                             | Example payload             | Comment
-| -------------------------- | ------------------------------------------------------- |---------------------------- | -------
-| leds/backgroundlight/color | Sets the background light, default is #000000           | #CC11DD                     |
-| ball/position              | The ball absolute position on the table, between 0 and 1| { "x": 0.5, "y": 0.3333}    |
-| ball/velocity              | The balls average speed in the last half second, km/h   | { "velocity": 30 }          | deprecated
-| ball/velocity/kmh          | The balls average speed in the last half second, km/h   | 30                          |
-| ball/velocity/ms           | The balls average speed in the last half second, m/s    | 5                           |
-| team/scored                | The id of the team that scored                          | 1                           |
-| game/score                 | The teams' scores                                       | { "score": [ 0, 3 ] }       | deprecated
-| game/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)       | 3                           | 
-| game/foul                  | Some foul has happened                                  | -                           |
-| game/start                 | A match starts                                          | -                           |
-| game/gameover              | A match ended                                           | { "winners": [ 0 ] }        |
-| game/idle                  | Is there action on the table                            | true                        |
-| game/reset                 | Command to interrupt the running game and startover     |                             |
-| leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                   |
+| topic                      | Description                                               | Example payload             | Comment
+| -------------------------- | --------------------------------------------------------- |---------------------------- | -------
+| leds/backgroundlight/color | Sets the background light, default is #000000             | #CC11DD                     |
+| ~~ball/position~~          | ~~The ball absolute position on the table, between 0 and 1  | { "x": 0.5, "y": 0.3333}~~ | **no more sent**
+| ball/position/rel          | The ball's relative position on the table, between 0 and 1| 0.5,0.3333                  |
+| ball/position/abs          | The ball's absolute position on the table, between 0 and \<table width/height\> | 42,106 |
+| ~~ball/velocity~~          | ~~The balls average speed in the last half second, km/h~~ | ~~{ "velocity": 30 }~~      | **no more sent**
+| ball/velocity/\<kmh\|mph\> | The balls average speed ~~in the last half second~~       | 30.1                        | Unit depends on table's unit (kilometers or miles per hour)
+| ball/velocity/\<ms\|ip\>   | The balls average speed ~~in the last half second~~       | 5.2                         | Unit depends on table's unit (meters or inches per second)
+| ball/distance/\<cm\|inch\>    | The ball's distance between last and current position  | 1.23                        | Unit depends on table's unit (centimeters or inches)
+| distance/overall/\<cm\|inch\> | The ball's overall distance during the current match   | 123.45                      | Unit depends on table's unit (centimeters or inches)
+| team/scored                | The id of the team that scored                            | 1                           |
+| game/score                 | The teams' scores                                         | { "score": [ 0, 3 ] }       | deprecated
+| team/score/\<teamid\>      | Score of team with teamid \<teamid\> (zero-based)         | 3                           | 
+| game/foul                  | Some foul has happened                                    | -                           |
+| game/start                 | A match starts                                            | -                           |
+| game/gameover              | A match ended                                             | 0,1                         | On draw all teams are sent separated by comma therwise the winning team only
+| game/idle                  | Is there action on the table                              | true                        |
+| game/reset                 | Command to interrupt the running game and startover       |                             |
+| leds/foregroundlight/color | Foreground light overrules everything else if not #000000 | #111111                     |
 
 ## Why this project?
 
