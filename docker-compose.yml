@@ -1,4 +1,4 @@
-version: '2.0'
+version: '2.3'
 
 services:
 
@@ -17,6 +17,7 @@ services:
       - default
 
   smart-football-table-detection: 
+    runtime: nvidia
     build:
       context: smart-football-table-detection
     environment:
