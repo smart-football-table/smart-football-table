@@ -31,6 +31,8 @@ services:
     environment:
       - MQTTHOST=mqttbroker
       - MQTTPORT=1883
+      - TABLEWIDTH=68
+      - TABLEHEIGHT=120
     depends_on:
       - "mqttbroker"
 
