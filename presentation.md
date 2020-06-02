@@ -91,7 +91,7 @@
 * Responsive Design
 * Heatmap, die den Ball und seine historischen Positionen als Verteilung anzeigt
 ##### LED
-* ein LED-Streifen, der über eine Mikrocontroller angesteuert auf verschiedene Events reagieren kann, in Java mit Bibliothek umgesetzt (oder?)
+* ein LED-Streifen, der über eine Mikrocontroller angesteuert wird. Kommunikation von PC zu Mikrokontroller erfolgt mit Java via serieller Schnittstelle (TPM2 Protokoll, damit keine fachliche Logik auf dem Mikrokontroller). 
 * Tor fällt: die LED leuchten in der Farbe des Teams auf, das getroffen hat, und erhöhen den permanent angezeigten Spielstand um 1 (symbolisiert durch 5 LEDS)
 * ein Foul tritt auf (x Sekunden ohne horizontale Ballpositionsveränderung): die LED blinken schnell in weißem Licht
 * die LED können auch manuell angesteuert werden, Foregrundlight, welches alles angezeigte überdeckt, oder Backgroundlight, welches eigentlich ausgeschaltete LEDs leuchten lässt
