@@ -48,7 +48,6 @@ TODO use docker in detection or explain how to start this here
 #### MQTT messages
 | topic                      | Description                                                       | Example payload             | Comment
 | -------------------------- | ----------------------------------------------------------------- |---------------------------- | -------
-| leds/backgroundlight/color | Sets the background light, default is #000000                     | #CC11DD                     |
 | ball/position/rel          | The ball's relative position on the table, between 0 and 1        | 0.5,0.3333                  |
 | ball/position/abs          | The ball's absolute position on the table, between 0 and \<table width/height\> | 42,106 |
 | ball/velocity/\<kmh\|mph\> | The balls average speed ~~in the last half second~~                | 30.1                        | Unit depends on table's unit (kilometers or miles per hour)
@@ -62,8 +61,8 @@ TODO use docker in detection or explain how to start this here
 | game/gameover              | A match ended                                                      | 0,1                         | On draw all teams are sent separated by comma therwise the winning team only
 | game/idle                  | Is there action on the table                                       | true                        |
 | game/reset                 | Command to interrupt the running game and startover                |                             |
-| leds/backgroundlight/color | Background light command: Color to use instead of #000000          | #111111                     |
-| leds/foregroundlight/color | Foreground light command: If anything other than #000000 overrules everything | #111111          |
+| leds/backgroundlight/color | Background light command: Color to use for turned-off leds         | #AB12EF                     | Default is #000000 (black as background)
+| leds/foregroundlight/color | Foreground light command: Overrules everything when set            | #AB12EF                     | Default is #000000 (no foreground light)
 
 ## Why this project?
 
