@@ -43,7 +43,7 @@ TODO use docker in detection or explain how to start this here
 ## The actual solution
 
 #### Architecture
-![arc](https://github.com/smart-football-table/smart-football-table.github.io/blob/master/modules/smart-football-table/architecture/SmartFootballTable_Architecture.png)
+![arc](https://smart-football-table.github.io/modules/smart-football-table/architecture/SmartFootballTable_Architecture.png)
 
 #### MQTT messages
 | topic                      | Description                                                       | Example payload             | Comment
